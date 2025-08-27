@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 
 })
 export class HomePage implements OnInit {
+searchTerm: any;
 ngOnInit(): void {
     
 }

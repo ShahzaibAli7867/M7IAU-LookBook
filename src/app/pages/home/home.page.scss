@@ -1,11 +1,9 @@
-
 ion-content.lookbook-page {
   --background: #ffffff;
   color: #000000;
   line-height: 1.5;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
 }
-
 
 .app-container {
   max-width: 430px;
@@ -15,7 +13,6 @@ ion-content.lookbook-page {
   position: relative;
 }
 
-/* ===== HEADER SECTION ===== */
 .header {
   padding: 0 20px;
   margin-bottom: 30px;
@@ -29,7 +26,6 @@ ion-content.lookbook-page {
   margin: 16px 0 32px 0;
   letter-spacing: -0.2px;
 }
-
 
 .search-container {
   margin-bottom: 20px;
@@ -45,20 +41,11 @@ ion-content.lookbook-page {
   transition: all 0.2s ease;
 }
 
-.search-bar:focus-within {
-  background-color: rgba(120, 120, 128, 0.24);
-  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
-}
-
 .search-icon {
-  font-size: 16px; 
+  font-size: 16px;
   color: #999999;
   flex-shrink: 0;
   transition: color 0.2s ease;
-}
-
-.search-bar:focus-within .search-icon {
-  color: #ef4444;
 }
 
 .search-input {
@@ -83,12 +70,10 @@ ion-content.lookbook-page {
   color: #cccccc;
 }
 
-/* ===== MAIN CONTENT ===== */
 .main-content {
   padding: 0 20px;
-  margin-bottom: 120px; 
+  margin-bottom: 120px;
 }
-
 
 .welcome-section {
   margin-bottom: 30px;
@@ -115,7 +100,6 @@ ion-content.lookbook-page {
   line-height: 1.4;
   letter-spacing: -0.1px;
 }
-
 
 .features-section {
   animation: fadeInUp 1s ease forwards;
@@ -156,7 +140,6 @@ ion-content.lookbook-page {
   color: #2980b9;
 }
 
-/* ===== BOTTOM NAVIGATION ===== */
 .bottom-navigation {
   position: fixed;
   bottom: 0;
@@ -175,7 +158,6 @@ ion-content.lookbook-page {
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-
 
 .nav-item {
   position: absolute;
@@ -200,11 +182,10 @@ ion-content.lookbook-page {
   transform: translateY(0);
 }
 
-/* Navigation positioning */
 .nav-search { left: 50px; }
 .nav-logbook { left: 110px; }
 .nav-history { left: 275px; }
-.nav-settings { left: 338px; }
+.nav-settings { left: 325px; }
 
 .nav-icon {
   font-size: 24px;
@@ -231,10 +212,9 @@ ion-content.lookbook-page {
   color: #ef4444;
 }
 
-/* ===== ADD RECORD BUTTON ===== */
 .add-record-btn {
   position: absolute;
-  top: 28px;
+  top:37px;
   left: 50%;
   transform: translateX(-50%);
   background: transparent;
@@ -243,121 +223,68 @@ ion-content.lookbook-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 7px;
-  padding: 8px;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 50px;
+  gap: 6px;
+  padding: 10px;
+  transition: all 0.3s cubic-bezier(0.14, 0, 0.2, 1);
+  border-radius: 60px;
+  text-align: center;
 }
 
 .add-record-btn:hover {
-  transform: translateX(-50%) translateY(-3px);
+  transform: translateX(-50%) translateY(-5px);
 }
 
 .add-record-btn:active {
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(-3px);
 }
 
 .add-record-circle {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #E7212B 0%, #E7212B 100%);
+  //background: linear-gradient(135deg, #E7212B 0%, #E7212B 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px rgba(231, 33, 43, 0.3);
-  //transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  //box-shadow: 0 -10px 15px rgba(239, 68, 68, 0.3);
   position: relative;
-  overflow: hidden;
 }
 
 .add-record-circle::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
-  border-radius: 50%;
-  opacity: 0;
-transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.add-record-btn:hover .add-record-circle {
-// transform: scale(1.1);
-  box-shadow: 0 15px 35px rgba(231, 33, 43, 0.4);
-  background: linear-gradient(135deg, #E7212B 0%, #E7212B 100%);
-}
-
-.add-record-btn:hover .add-record-circle::before {
-  opacity: 1;
-}
-
-// .add-record-btn:active .add-record-circle {
-//   transform: scale(0.95);
-// }
-
-.add-icon {
-  font-size: 28px;
-  color: #ffffff;
-   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  //z-index: 1;
-}
-
-.add-record-circle {
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(135deg, #E7212B 0%, #E7212B 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
-  //transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.add-record-circle::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
-  border-radius: 50%;
+  border-radius: 20%;
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
 }
 
-.add-record-btn:hover .add-record-circle {
-  // transform: scale(1.1);
-  box-shadow: 0 15px 35px rgba(231, 33, 43, 0.4);
-  background: linear-gradient(135deg, #E7212B 0%, #E7212B 100%);
-}
-
-.add-record-btn:hover .add-record-circle::before {
-  opacity: 1;
-}
-
-// .add-record-btn:active .add-record-circle {
-//   transform: scale(0.95);
-// }
 
 .add-icon {
   font-size: 28px;
   color: #ffffff;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  //z-index: 1;
   line-height: 14px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
   letter-spacing: -0.05px;
+}
+
+.add-record-label {
+  font-weight: 500;
+  font-size: 12px;
+  color: #6c757d;
+  line-height: 20px;
+  margin-top: 4px;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .add-record-btn:hover .add-record-label {
   color: #E7212B;
 }
 
-/* ===== ANIMATIONS ===== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -369,19 +296,11 @@ transition: opacity 0.3s ease;
   }
 }
 
-/* ===== ACCESSIBILITY ===== */
-.search-input:focus {
-  outline: 2px solid #E7212B;
-  outline-offset: 2px;
-}
-
 .nav-item:focus,
 .add-record-btn:focus {
-  //soutline: 2px solid #ef4444;
   outline-offset: 2px;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 430px) {
   .app-container {
     width: 100vw;
@@ -434,7 +353,6 @@ transition: opacity 0.3s ease;
   }
 }
 
-/* ===== DARK MODE SUPPORT ===== */
 @media (prefers-color-scheme: dark) {
   ion-content.lookbook-page {
     --background: #1a1a1a;
@@ -456,7 +374,6 @@ transition: opacity 0.3s ease;
   }
 }
 
-/* ===== PRINT STYLES ===== */
 @media print {
   .bottom-navigation {
     display: none;

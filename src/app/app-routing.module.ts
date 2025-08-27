@@ -4,17 +4,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'splash-one',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
-  {
-    path: 'splash-one',
-    loadChildren: () => import('./pages/splash-one/splash-one.module').then( m => m.SplashOnePageModule)
-  },
-  {
-    path: 'splash-two',
-    loadChildren: () => import('./pages/splash-two/splash-two.module').then( m => m.SplashTwoPageModule)
-  },
+ 
   {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
