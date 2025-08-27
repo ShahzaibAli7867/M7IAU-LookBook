@@ -1,0 +1,7 @@
+{
+  "name": "m7iau-lookbook-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

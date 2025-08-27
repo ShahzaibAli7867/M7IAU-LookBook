@@ -1,0 +1,14 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+:root {
+  --primary-color: #ef4444;
+  --primary-dark: #dc2626;
+  --text-primary: #000000;
+  --text-secondary: #6c757d;
+  --text-muted: #999999;
+  --background-color: #ffffff;
+  --border-radius: 100px;
+  --shadow-primary: 0 10px 25px rgba(239, 68, 68, 0.3);
+  --shadow-hover: 0 15px 35px rgba(239, 68, 68, 0.4);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
