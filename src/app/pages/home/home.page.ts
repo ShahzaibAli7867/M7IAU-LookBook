@@ -11,8 +11,14 @@ import { Router } from '@angular/router';
 
 })
 export class HomePage implements OnInit {
+activeTab: any;
+
 searchTerm: any;
 ngOnInit(): void {
-    
+   this.activeTab = 'search'; // default active
 }
+
+  setActive(tab: string) {
+    this.activeTab = tab;
+  }
 }
