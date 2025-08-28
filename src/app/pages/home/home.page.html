@@ -1,70 +1,77 @@
-io<ion-content [fullscreen]="true" class="lookbook-page">
-  <div class="app-container">
-    <header class="header">
-      <h1 class="app-title">M7IAU Lookbook</h1>
+<ion-header class="header">
+  <ion-toolbar>
+    <h1 class="app-title">M7IAU LookBook</h1>
+  </ion-toolbar>
+</ion-header>
 
-      <div class="search-container">
-        <div class="search-bar">
-          <ion-icon class="search-icon" name="search-outline" aria-hidden="true"></ion-icon>
-          <input type="text" placeholder="Search for the call sign" class="search-input" id="searchInput" />
-        </div>
+<ion-content [fullscreen]="true" class="lookbook-page">
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <div class="search-bar">
+      <ion-icon class="search-icon" name="search-outline"></ion-icon>
+      <ion-input
+        placeholder="Search for the call sign"
+        class="search-input"
+        id="searchInput"
+      ></ion-input>
+    </div>
+  </div>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section">
+    <h2 class="welcome-title">Welcome To The LookBook</h2>
+    <p class="welcome-subtitle">
+      Quickly search and explore verified call signs here!
+    </p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="feature-item">
+
+      <ion-img class="feature-icon" src="assets/icon/Globe.png" alt=""></ion-img>
+      <div class="feature-text">
+        <span>Real-time data powered by </span>
+        <a href="https://www.qrz.com" target="_blank" class="feature-link">QRZ.com</a>
       </div>
-    </header>
+    </div>
+
+    <div class="feature-item">
+      <ion-img class="feature-icon" src="assets/icon/Copyright.png" alt=""></ion-img>
+      <div class="feature-text">
+        <span>Fully licensed lookup integration</span>
+      </div>
+    </div>
+  </section>
+
+</ion-content>
+<ion-footer>
+  <nav class="bottom-navigation" role="navigation" aria-label="Primary">
+    <div class="nav-background"></div>
+
+    <ion-button fill="clear" class="nav-item nav-search" aria-label="Search">
+      <ion-img class="nav-icon" src="assets/icon/search.png" alt="Search Icon"></ion-img>
+    </ion-button>
+
+    <ion-button fill="clear" class="nav-item nav-logbook" aria-label="Logbook">
+      <ion-img class="nav-icon" src="assets/icon/lookbook.png" alt="Logbook Icon"></ion-img>
+    </ion-button>
+
+    <ion-button fill="clear" class="nav-item nav-history" aria-label="History">
+      <ion-img class="nav-icon" src="assets/icon/history.png" alt="History Icon"></ion-img>
+    </ion-button>
 
   
-    <main class="main-content">
-      <section class="welcome-section">
-        <h2 class="welcome-title">Welcome To The Lookbook</h2>
-        <p class="welcome-subtitle">Quickly search and explore verified call signs here!</p>
-      </section>
+    <ion-button fill="clear" class="nav-item nav-settings" aria-label="Settings">
+      <ion-img class="nav-icon" src="assets/icon/settings.png" alt="Settings Icon"></ion-img>
+    </ion-button>
 
-      <section class="features-section">
-        <div class="feature-item">
-          <ion-img class="feature-icon" src="assets/icon/Globe.png" alt="Checkmark Icon"></ion-img>
-          <div class="feature-text">
-            <span>Real-time data powered by </span>
-            <a href="https://www.qrz.com" target="_blank" class="feature-link">QRZ.com</a>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <ion-img class="feature-icon" src="assets/icon/Copyright.png" alt="Checkmark Icon"></ion-img>
-          <div class="feature-text">
-            <span>Fully licensed lookup integration</span>
-          </div>
-        </div>
-      </section>
-    </main>
-
-   
-    <nav class="bottom-navigation" role="navigation" aria-label="Primary">
-      <div class="nav-background"></div>
-
-      
-      <button class="nav-item nav-search" data-nav="search" aria-label="Search">
-        <ion-img class="nav-icon" src="assets/icon/search.png" alt="Search Icon"></ion-img>
-        
-      </button>
-
-      <button class="nav-item nav-logbook" data-nav="logbook" aria-label="Logbook">
-        <ion-img class="nav-icon" src="assets/icon/lookbook.png" alt="Logbook Icon"></ion-img>
-      </button>
-
-      <button class="nav-item nav-history" data-nav="history" aria-label="History">
-        <ion-img class="nav-icon" src="assets/icon/history.png" alt="History Icon"></ion-img>
-      </button>
-
-      <button class="nav-item nav-settings" data-nav="settings" aria-label="Settings">
-        <ion-img class="nav-icon" src="assets/icon/settings.png" alt="Settings Icon"></ion-img>
-      </button>
-
-
-      <button class="add-record-btn" id="addRecordBtn" aria-label="Add record">
-        <div class="add-record-circle">
-          <ion-img class="add-icon" src="assets/icon/addrecord.png" alt="Add Icon"></ion-img>
-        </div>
-       <!-- // <span class="add-record-label">Add Record</span> -->
-      </button>
-    </nav>
-  </div>
-</ion-content>
+    <ion-button fill="clear" class="add-record-btn" id="addRecordBtn" aria-label="Add record">
+      <div class="add-record-circle">
+        <ion-img class="add-icon" src="assets/icon/addrecord.png" alt="Add Icon"></ion-img>
+      </div>
+      <!-- <span class="add-record-label">Add Record</span> -->
+    </ion-button>
+  </nav>
+</ion-footer>
