@@ -2,44 +2,15 @@
   --background: #ffffff;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
   color: #000;
-}
-ion-toolbar {
---border-style: none;
---border-width: 0;
---border-color: transparent;
-box-shadow: none;
-}
-
-.header {
-   text-align: start;
-  --background: #ffffff;
-  box-shadow: none;
-  border-bottom: none;
-}
+ }
 .search-container {
-  padding: 12px 16px;
+  padding: 10px;
 }
 
-
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  background: #f1f1f1;
-  border-radius: 12px;
-  padding: 6px 10px;
-}
-
-.search-icon {
-  font-size: 20px;
-  margin-right: 8px;
-  color: #666;
-}
-
-.search-input {
-  flex: 1;
-  font-size: 15px;
-  color: none;
+ion-searchbar {
+  --background: #f3f3f3;
+  --border-radius: 12px;
+  --box-shadow: none;
 }
 
 .welcome-section {
@@ -77,6 +48,7 @@ box-shadow: none;
 
 .feature-icon {
   font-size: 24px;
+  margin-left: 15px; 
   color: #6c757d;
   flex-shrink: 0;
 }
@@ -179,13 +151,13 @@ box-shadow: none;
   text-align: center;
 }
 
-.add-record-btn:hover {
-  transform: translateX(-50%) translateY(-5px);
-}
+// .add-record-btn:hover {
+//   transform: translateX(-50%) translateY(-5px);
+// }
 
-.add-record-btn:active {
-  transform: translateX(-50%) translateY(-3px);
-}
+// .add-record-btn:active {
+//   transform: translateX(-50%) translateY(-3px);
+// }
 
 .add-record-circle {
   width: 70px;
