@@ -1,22 +1,61 @@
-ion-content.lookbook-page {
+.lookbook-page {
   --background: #ffffff;
-  color: #000000;
-  line-height: 1.5;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  color: #000;
 }
-
-.app-container {
-  max-width: 430px;
-  margin: 0 auto;
-  min-height: 100vh;
-  background-color: #ffffff;
-  position: relative;
+ion-toolbar {
+--border-style: none;
+--border-width: 0;
+--border-color: transparent;
+box-shadow: none;
 }
 
 .header {
-  padding: 0 20px;
-  margin-bottom: 30px;
-  background-color: #ffffff;
+   text-align: start;
+  --background: #ffffff;
+  box-shadow: none;
+  border-bottom: none;
+}
+.search-container {
+  padding: 12px 16px;
+}
+
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 12px;
+  padding: 6px 10px;
+}
+
+.search-icon {
+  font-size: 20px;
+  margin-right: 8px;
+  color: #666;
+}
+
+.search-input {
+  flex: 1;
+  font-size: 15px;
+  color: none;
+}
+
+.welcome-section {
+  padding: 16px;
+}
+
+.welcome-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.welcome-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
 }
 
 .app-title {
@@ -24,88 +63,8 @@ ion-content.lookbook-page {
   font-size: 20px;
   color: #000000;
   margin: 16px 0 32px 0;
+  margin-left: 10px; 
   letter-spacing: -0.2px;
-}
-
-.search-container {
-  margin-bottom: 20px;
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  padding: 11px 16px;
-  background-color: rgba(120, 120, 128, 0.16);
-  border-radius: 100px;
-  gap: 8px;
-  transition: all 0.2s ease;
-}
-
-.search-icon {
-  font-size: 16px;
-  color: #999999;
-  flex-shrink: 0;
-  transition: color 0.2s ease;
-}
-
-.search-input {
-  border: none;
-  background: transparent;
-  color: #000000;
-  font-size: 17px;
-  font-weight: 400;
-  letter-spacing: -0.08px;
-  line-height: 22px;
-  width: 100%;
-  outline: none;
-  font-family: inherit;
-}
-
-.search-input::placeholder {
-  color: #999999;
-  transition: color 0.2s ease;
-}
-
-.search-input:focus::placeholder {
-  color: #cccccc;
-}
-
-.main-content {
-  padding: 0 20px;
-  margin-bottom: 120px;
-}
-
-.welcome-section {
-  margin-bottom: 30px;
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 200ms;
-  opacity: 0;
-  transform: translateY(-16px);
-}
-
-.welcome-title {
-  font-weight: 500;
-  font-size: 24px;
-  color: #000000;
-  margin: 0 0 3px 0;
-  line-height: 1.2;
-  letter-spacing: -0.3px;
-}
-
-.welcome-subtitle {
-  font-weight: 400;
-  font-size: 17px;
-  color: #6c757d;
-  margin: 0;
-  line-height: 1.4;
-  letter-spacing: -0.1px;
-}
-
-.features-section {
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 400ms;
-  opacity: 0;
-  transform: translateY(-16px);
 }
 
 .feature-item {
@@ -136,11 +95,10 @@ ion-content.lookbook-page {
   transition: color 0.2s ease;
 }
 
-.feature-link:hover {
-  color: #2980b9;
-}
-
 .bottom-navigation {
+  --background: transparent;
+  border-top: none;
+  box-shadow: none;
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -149,6 +107,16 @@ ion-content.lookbook-page {
   max-width: 430px;
   height: 149px;
   z-index: 100;
+
+  .nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    border-radius: 20px 20px 0 0;
+    padding: 10px 10px 6px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
 }
 
 .nav-background {
@@ -161,7 +129,7 @@ ion-content.lookbook-page {
 
 .nav-item {
   position: absolute;
-  top: 73px;
+  top: 50px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -174,34 +142,15 @@ ion-content.lookbook-page {
   border-radius: 8px;
 }
 
-.nav-item:hover {
-  transform: translateY(-2px);
-}
+.nav-search { left: 35px; }
+.nav-logbook { left: 95px; }
+.nav-history { left: 250px; }
+.nav-settings { left: 305px; }
 
-.nav-item:active {
-  transform: translateY(0);
-}
-
-.nav-search { left: 50px; }
-.nav-logbook { left: 110px; }
-.nav-history { left: 275px; }
-.nav-settings { left: 325px; }
-
-.nav-icon {
-  font-size: 24px;
-  color: #6c757d;
-  transition: all 0.3s ease;
-}
-
-.nav-item:hover .nav-icon {
-  color: #ef4444;
-  transform: scale(1.1);
-}
 
 .nav-label {
   font-weight: 400;
   font-size: 12px;
-  color: #6c757d;
   line-height: 14px;
   white-space: nowrap;
   transition: color 0.3s ease;
@@ -213,11 +162,11 @@ ion-content.lookbook-page {
 }
 
 .add-record-btn {
-  position: absolute;
-  top:37px;
-  left: 50%;
+    position: absolute;
+    top: 15px;
+    left: 50%;
   transform: translateX(-50%);
-  background: transparent;
+   background: transparent;
   border: none;
   cursor: pointer;
   display: flex;
@@ -241,33 +190,10 @@ ion-content.lookbook-page {
 .add-record-circle {
   width: 70px;
   height: 70px;
-  //background: linear-gradient(135deg, #E7212B 0%, #E7212B 100%);
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  //box-shadow: 0 -10px 15px rgba(239, 68, 68, 0.3);
   position: relative;
-}
-
-.add-record-circle::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 20%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-
-.add-icon {
-  font-size: 28px;
-  color: #ffffff;
-  line-height: 14px;
-  transition: color 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  white-space: nowrap;
-  letter-spacing: -0.05px;
 }
 
 .add-record-label {
@@ -279,107 +205,4 @@ ion-content.lookbook-page {
   text-align: center;
   white-space: nowrap;
   pointer-events: none;
-}
-
-.add-record-btn:hover .add-record-label {
-  color: #E7212B;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(-16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.nav-item:focus,
-.add-record-btn:focus {
-  outline-offset: 2px;
-}
-
-@media (max-width: 430px) {
-  .app-container {
-    width: 100vw;
-  }
-
-  .bottom-navigation {
-    width: 100vw;
-  }
-}
-
-@media (max-width: 375px) {
-  .nav-search { left: 40px; }
-  .nav-logbook { left: 90px; }
-  .nav-history { left: 245px; }
-  .nav-settings { left: 300px; }
-
-  .add-record-circle {
-    width: 60px;
-    height: 60px;
-  }
-
-  .add-icon {
-    font-size: 14px;
-  }
-
-  .welcome-title {
-    font-size: 22px;
-  }
-
-  .feature-text {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 320px) {
-  .header {
-    padding: 0 16px;
-  }
-
-  .main-content {
-    padding: 0 16px;
-  }
-
-  .app-title {
-    font-size: 18px;
-  }
-
-  .welcome-title {
-    font-size: 20px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  ion-content.lookbook-page {
-    --background: #1a1a1a;
-    color: #ffffff;
-  }
-
-  .app-container,
-  .header {
-    background-color: #1a1a1a;
-  }
-
-  .app-title,
-  .welcome-title {
-    color: #ffffff;
-  }
-
-  .search-input {
-    color: #ffffff;
-  }
-}
-
-@media print {
-  .bottom-navigation {
-    display: none;
-  }
-
-  .main-content {
-    margin-bottom: 0;
-  }
 }
