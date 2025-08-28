@@ -1,4 +1,4 @@
-<ion-header class="header">
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <h1 class="app-title">M7IAU LookBook</h1>
   </ion-toolbar>
@@ -6,16 +6,13 @@
 
 <ion-content [fullscreen]="true" class="lookbook-page">
 
-  <!-- Search Bar -->
-  <div class="search-container">
-    <div class="search-bar">
-      <ion-icon class="search-icon" name="search-outline"></ion-icon>
-      <ion-input
-        placeholder="Search for the call sign"
-        class="search-input"
-        id="searchInput"
-      ></ion-input>
-    </div>
+   <div class="search-container">
+    <ion-searchbar
+      [(ngModel)]="searchTerm"
+      placeholder="Search for the call sign"
+      inputmode="search"
+      show-clear-button="focus">
+    </ion-searchbar>
   </div>
 
   <!-- Welcome Section -->
