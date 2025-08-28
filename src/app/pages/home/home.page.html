@@ -47,28 +47,47 @@
   <nav class="bottom-navigation" role="navigation" aria-label="Primary">
     <div class="nav-background"></div>
 
-    <ion-button fill="clear" class="nav-item nav-search" aria-label="Search">
+    <ion-button 
+      fill="clear" 
+      class="nav-item nav-search" 
+      [class.active]="activeTab === 'search'" 
+      (click)="setActive('search')" 
+      aria-label="Search">
       <ion-img class="nav-icon" src="assets/icon/search.png" alt="Search Icon"></ion-img>
     </ion-button>
 
-    <ion-button fill="clear" class="nav-item nav-logbook" aria-label="Logbook">
+    <ion-button 
+      fill="clear" 
+      class="nav-item nav-logbook" 
+      [class.active]="activeTab === 'logbook'" 
+      (click)="setActive('logbook')" 
+      aria-label="Logbook">
       <ion-img class="nav-icon" src="assets/icon/lookbook.png" alt="Logbook Icon"></ion-img>
     </ion-button>
 
-    <ion-button fill="clear" class="nav-item nav-history" aria-label="History">
+    <ion-button 
+      fill="clear" 
+      class="nav-item nav-history" 
+      [class.active]="activeTab === 'history'" 
+      (click)="setActive('history')" 
+      aria-label="History">
       <ion-img class="nav-icon" src="assets/icon/history.png" alt="History Icon"></ion-img>
     </ion-button>
 
-  
-    <ion-button fill="clear" class="nav-item nav-settings" aria-label="Settings">
+    <ion-button 
+      fill="clear" 
+      class="nav-item nav-settings" 
+      [class.active]="activeTab === 'settings'" 
+      (click)="setActive('settings')" 
+      aria-label="Settings">
       <ion-img class="nav-icon" src="assets/icon/settings.png" alt="Settings Icon"></ion-img>
     </ion-button>
 
+    <!-- Floating Center Button -->
     <ion-button fill="clear" class="add-record-btn" id="addRecordBtn" aria-label="Add record">
       <div class="add-record-circle">
         <ion-img class="add-icon" src="assets/icon/addrecord.png" alt="Add Icon"></ion-img>
       </div>
-      <!-- <span class="add-record-label">Add Record</span> -->
     </ion-button>
   </nav>
 </ion-footer>
