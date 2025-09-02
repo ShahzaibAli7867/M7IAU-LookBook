@@ -89,7 +89,7 @@ ion-searchbar {
   background-repeat: no-repeat;
 }
 
-/* Common nav item style */
+
 .nav-item {
   position: absolute;
   top: 50px;
@@ -127,12 +127,14 @@ ion-searchbar {
   transform: none !important;
 }
 
-.nav-search { left: 35px; }
-.nav-logbook { left: 95px; }
-.nav-history { left: 250px; }
-.nav-settings { left: 305px; }
 
-/* Center floating add button */
+.nav-search   { left: 8%; }
+.nav-logbook  { left: 22%; }
+.nav-history  { left: 58%; }
+.nav-settings { left: 71%; }
+
+
+
 .add-record-btn {
   position: absolute;
   top: 15px;
@@ -197,8 +199,7 @@ ion-searchbar {
 }
 
 /* If PNG icons, apply color via drop-shadow */
-.nav-item.active ion-img {
+.nav-item:active ion-img {
   filter: brightness(0) saturate(100%) invert(27%) sepia(94%) saturate(7400%) hue-rotate(353deg) brightness(97%) contrast(97%);
 }
-
 
